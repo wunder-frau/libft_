@@ -21,7 +21,7 @@ SRCS =	ft_isalpha.c \
 	ft_calloc.c \
 	ft_atoi.c \
 	ft_strlcat.c \
-	ft_substr.c	\
+	ft_substr.c \
 	ft_strjoin.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
@@ -32,23 +32,21 @@ SRCS =	ft_isalpha.c \
 	ft_itoa.c \
 	ft_strmapi.c \
 	ft_striteri.c \
+	ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstadd_back_bonus.c \
+	ft_lstdelone_bonus.c \
+	ft_lstclear_bonus.c \
+	ft_lstiter_bonus.c \
+	ft_lstmap_bonus.c \
 	$(addprefix ./ft_printf/, ft_printf.c ft_put_digit.c \
 				ft_put_unumber.c ft_putchar.c ft_putstr.c \
 							ft_put_percent.c ft_put_ptr.c) \
 	$(addprefix ./get_next_line/, get_next_line.c get_next_line_utils.c)
 
-SRCS_BONUS = ft_lstnew_bonus.c \
-	ft_lstadd_front_bonus.c \
-	ft_lstsize_bonus.c \
-	ft_lstlast_bonus.c \
-	ft_lstadd_back_bonus.c\
-	ft_lstdelone_bonus.c \
-	ft_lstclear_bonus.c \
-	ft_lstiter_bonus.c \
-	ft_lstmap_bonus.c
-
 OBJ = $(SRCS:.c=.o)
-OBJ_BONUS = $(SRCS_BONUS:.c=.o)
 NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -61,19 +59,12 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: .bonus 
-	
-.bonus: $(OBJ_BONUS)
-	ar -rcs $(NAME) $(OBJ_BONUS)
-	@ touch .bonus
-
 clean:
-	rm -rf $(OBJ) $(OBJ_BONUS)
-	@rm -rf .bonus
+	rm -rf $(OBJ)
 
 fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean
