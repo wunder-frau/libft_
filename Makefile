@@ -23,6 +23,7 @@ SRCS =	ft_isalpha.c \
 	ft_is_odd.c \
 	ft_is_space.c \
 	ft_atoi.c \
+	ft_atol.c \
 	ft_strlcat.c \
 	ft_substr.c \
 	ft_strjoin.c \
