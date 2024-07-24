@@ -6,7 +6,7 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:06:07 by istasheu          #+#    #+#             */
-/*   Updated: 2024/07/21 00:14:42 by istasheu         ###   ########.fr       */
+/*   Updated: 2024/07/24 18:51:41 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+char	*ft_strncpy(char *dest, char *src, size_t n);
+char	*ft_strcpy(char *dest, char *src);
+char	*ft_strcat(char *dest, char *src);
 
 /* ft_printf */
 int		ft_putchar(char c);

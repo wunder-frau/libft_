@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/24 18:33:14 by istasheu          #+#    #+#             */
-/*   Updated: 2024/07/24 18:49:12 by istasheu         ###   ########.fr       */
+/*   Created: 2024/07/24 18:48:38 by istasheu          #+#    #+#             */
+/*   Updated: 2024/07/24 18:48:53 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strncpy(char *dest, char *src, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (*(src + i))
+	while (i < n)
 	{
 		*(dest + i) = *(src + i);
 		i++;
 	}
-	*(dest + i) = 0;
 	return (dest);
 }

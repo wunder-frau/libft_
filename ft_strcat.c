@@ -6,9 +6,11 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 18:38:13 by istasheu          #+#    #+#             */
-/*   Updated: 2024/07/24 18:39:37 by istasheu         ###   ########.fr       */
+/*   Updated: 2024/07/24 18:49:46 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *dest, char *src)
 {
