@@ -6,20 +6,25 @@
 /*   By: istasheu <istasheu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 18:48:38 by istasheu          #+#    #+#             */
-/*   Updated: 2024/07/24 18:48:53 by istasheu         ###   ########.fr       */
+/*   Updated: 2024/07/25 09:23:21 by istasheu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, char *src, size_t n)
+char *ft_strncpy(char *dest, const char *src, size_t n)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
 	while (i < n)
 	{
-		*(dest + i) = *(src + i);
+		dest[i] = '\0';
 		i++;
 	}
 	return (dest);
