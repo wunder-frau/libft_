@@ -57,7 +57,7 @@ SRCS =	ft_isalpha.c \
 OBJ = $(SRCS:.c=.o)
 NAME = libft.a
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fPIC
 
 all: $(NAME)
 
